@@ -63,7 +63,24 @@ body {
 .nav-element:not(:first-child) {   
   margin-left: 50px;
 }
- 
+/*ICONS__________________________________HEADER-ICONS_____________________________________ICONS*/
+ .header-icon-envelope{
+   fill: var(--grey-color);  
+   margin-right: 10px;
+ }
+ .header-icon-phone{
+  fill: var(--grey-color); 
+  margin-right: 10px;
+ }
+ .link-head:hover .header-icon-envelope
+ {
+   fill: var(--blue-color);
+ }
+ .link-head:hover .header-icon-phone
+ {
+  fill: var(--blue-color);
+ }
+
 /*logo стиль*/
 .logo-head,
 .logo-foot {
@@ -110,9 +127,13 @@ body {
   color: var(--grey-color);
 }
 .link-head-one {
-  color: var(--black-color);
+  color: var(--black-color);}
+  .navigation-list-second{
+    display: flex;
+    align-items: center;
+  }
 /* header end _______________________________HEADER-END_______________________________header end*/
-}
+
 
 img{
   display: block;
@@ -127,6 +148,12 @@ a {
   text-decoration: none;
 }
 /* FIRST-BLOCK______________________________FIRST-BLOCK_____________________________FIRST-BLOCK*/
+.background{
+ background-image: url(../images/bacground.jpg); 
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+}
 .section-head {
   padding: 200px 0;
   background-color: #2f303a;
@@ -199,9 +226,26 @@ cursor: pointer;
 }
 /*BUTTON-END________________________________________BUTTON_END___________________________________BUTTON-END*/
 /*SECOND-BLOCK____________________________________SECOND-BLOCK__________________________________SECOND-BLOCK*/
-.features {
+/*icons__________________icons____________________icons*/
+
+.features, .features-icon-list {
   display: flex;
 }
+.features-icon-item{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 270px; 
+  background-color: #F5F4FA;    
+}
+.features-icon{
+  
+}
+.features-icon-item:nth-child(n+2){
+  margin-left: 30px;
+}
+/*icons__________________icons___________________icons*/
 .features-item:not(:last-child){
   margin-right: 30px;
 }
@@ -286,8 +330,9 @@ cursor: pointer;
   letter-spacing: 0.03em;
   color: var(--grey-color);
 }
-.work-title,   /*H2*/
-.comand-title {  
+.work-title,   /*H-2_______________________________H-2___________________________________H-2*/
+.comand-title,
+.client-title {  
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -296,8 +341,9 @@ cursor: pointer;
   letter-spacing: 0.03em;
   color: var(--black-color);
 }
-.features-title,   /*H3*/
-.team-title {     
+.features-title,   /*H-3_________________________H-3__________________________________H-3*/
+.team-title,
+.join-title {     
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 16px;
@@ -313,6 +359,75 @@ cursor: pointer;
   text-align: center;
    padding: 30px 0;   
 }
+/*Icons_______________________________________________ICONS____________________________________*/
+.team-contacts{
+  display: flex;
+  margin: 16px 32px 30px 32px;
+}
+.team-contacts-item,
+.join-item{  
+  cursor: pointer; 
+  display: flex;  
+}
+.team-link,
+.join-link
+{
+  display: flex;
+  background-color: var(--white-color);
+  width: 44px;
+  height: 44px; 
+  border-radius: 50%; 
+  align-items: center;
+  justify-content: center;  
+}
+
+.team-link:hover, .join-link:hover {
+  background-color: #2196F3;  
+}
+.team-link:hover .team-contacts-icon {
+  fill:var(--white-color);  
+}
+.team-contacts-item:nth-child(n+2),
+.join-item:nth-child(n+2)
+{
+  margin-left: 10px;
+}
+
+.team-contacts-icon{  
+  fill:#AFB1B8;   
+}
+/*LAST-SECTION_______________________________LAST-SECTION_______________________________LAST-SECTION*/
+.client-list{
+  display: flex;
+}
+.client-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid #AFB1B8;
+  border-radius: 4%;
+  width: 170px;
+  height: 92px;    
+}
+.client-link{
+  color: #AFB1B8;
+}
+.client-icon{
+  fill: currentColor;
+}
+.join-link{
+  background: rgba(255, 255, 255, 0.1);
+}
+.client-link:hover{
+  color: #2196F3;
+}
+
+.client-item:nth-child(n+2){
+  margin-left: 30px;
+}
+
+
+/*ICONS-END_______________________________________ICONS-END____________________________ICONS-END*/
 /* body end ____________________________________________________________________body-end */
 /*Footer */
 .foot {
@@ -350,6 +465,20 @@ cursor: pointer;
 }
 .logo-foot-element {
   color: var(--white-color);
+}
+.join-list{
+  display: flex;
+}
+.join-title{
+  margin-bottom: 20px;
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+.join-icon{
+  fill:var(--white-color);
+}
+.join-box{
+  width: 206px;   
 }
 .visually-hidden {
   position: absolute;
