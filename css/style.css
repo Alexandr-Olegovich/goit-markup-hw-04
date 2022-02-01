@@ -409,17 +409,25 @@ cursor: pointer;
   width: 170px;
   height: 92px;    
 }
-.client-link{
+.client-link{  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit; 
+  height: inherit; 
   color: #AFB1B8;
 }
-.client-icon{
+.client-item:hover{
+  border: 1px solid #2196F3;
+}
+.client-icon{  
   fill: currentColor;
 }
 .join-link{
   background: rgba(255, 255, 255, 0.1);
 }
-.client-link:hover{
-  color: #2196F3;
+.client-link:hover {
+  color: #2196F3;  
 }
 
 .client-item:nth-child(n+2){
