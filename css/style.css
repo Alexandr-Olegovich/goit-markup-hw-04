@@ -431,6 +431,7 @@ cursor: pointer;
 /* body end ____________________________________________________________________body-end */
 /*Footer */
 .foot {
+  display: flex;
   padding: 60px 0; 
   font-style: normal;
   background: #2f303a;
@@ -466,10 +467,10 @@ cursor: pointer;
 .logo-foot-element {
   color: var(--white-color);
 }
-.join-list{
+.join-list{   
   display: flex;
 }
-.join-title{
+.join-title{  
   margin-bottom: 20px;
   color: var(--white-color);
   text-transform: uppercase;
@@ -477,7 +478,8 @@ cursor: pointer;
 .join-icon{
   fill:var(--white-color);
 }
-.join-box{
+.join-box{  
+  margin-right: 878px;    
   width: 206px;   
 }
 .visually-hidden {
