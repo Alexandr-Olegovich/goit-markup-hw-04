@@ -72,11 +72,13 @@ body {
   fill: var(--grey-color); 
   margin-right: 10px;
  }
- .link-head:hover .header-icon-envelope
+ .link-head:hover .header-icon-envelope,
+ .link-head:focus .header-icon-envelope
  {
    fill: var(--blue-color);
  }
- .link-head:hover .header-icon-phone
+ .link-head:hover .header-icon-phone,
+ .link-head:focus .header-icon-phone 
  {
   fill: var(--blue-color);
  }
@@ -128,7 +130,8 @@ body {
 }
 .link-head-one {
   color: var(--black-color);}
-  .navigation-list-second{
+  .navigation-list-second,
+  .link-head{
     display: flex;
     align-items: center;
   }
@@ -148,15 +151,18 @@ a {
   text-decoration: none;
 }
 /* FIRST-BLOCK______________________________FIRST-BLOCK_____________________________FIRST-BLOCK*/
-.background{
- background-image: url(../images/bacground.jpg); 
- background-repeat: no-repeat;
- background-position: center;
- background-size: cover;
-}
 .section-head {
   padding: 200px 0;
   background-color: #2f303a;
+  background-image:
+  linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  url(../images/bacground.jpg); 
+  max-width: 1600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;  
 }
 .title {  
   width: 696px; 
@@ -171,8 +177,9 @@ a {
   margin-right: auto;
 }
 /* BUTTON_______________________________________BUTTON___________________________________BUTTON */
+/*_______________________________________PORTFOLIO__________________________*/
 .portfolio-button 
-{
+{  
   padding: 6px 22px;
   border-radius: 4px;
   border: transparent;
@@ -188,7 +195,15 @@ a {
 .portfolio-button:focus {
   color: var(--white-color);
   background-color: var(--blue-color);
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
 }
+.portfolio-link{
+  display: block;
+}
+.portfolio-link:hover, .portfolio-link:focus{
+  box-shadow: 0 0 4px rgba(0,0,0,0.25);
+}
+
 .press-it { 
   padding: 10px 32px;
   border-radius: 4px;
@@ -228,22 +243,19 @@ cursor: pointer;
 /*SECOND-BLOCK____________________________________SECOND-BLOCK__________________________________SECOND-BLOCK*/
 /*icons__________________icons____________________icons*/
 
-.features, .features-icon-list {
+.features, .features-conteiner {
   display: flex;
 }
-.features-icon-item{ 
+.features-conteiner{ 
+  width: 270px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 120px;
   width: 270px; 
-  background-color: #F5F4FA;    
-}
-.features-icon{
-  
-}
-.features-icon-item:nth-child(n+2){
-  margin-left: 30px;
+  background-color: #F5F4FA;  
+  margin-bottom: 30px; 
+  border-radius: 4px; 
 }
 /*icons__________________icons___________________icons*/
 .features-item:not(:last-child){
@@ -253,8 +265,7 @@ cursor: pointer;
   width: 270px;
 }
 .features-text
- {  
-   
+ {    
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
@@ -273,17 +284,18 @@ cursor: pointer;
   display: flex;
   flex-wrap: wrap; 
 }
-.portfolio-item:nth-child(n+4){
-  margin-top: 30px;
+
+.portfolio-item{
+  margin-left: 30px;  
 }
-.portfolio-item /* porfolio-card */
-{
-    margin-left: 30px; 
-}
-.portfolio-item:nth-child(3n+1) /* porfolio-card */
-{
+.portfolio-item:nth-child(3n+1){
   margin-left: 0px;
 }
+.portfolio-item:nth-child(n+4){
+   margin-top: 30px;
+}
+
+
 
 .card-box /* card-box-conteiner-portfolio */
 {   
@@ -362,13 +374,9 @@ cursor: pointer;
 /*Icons_______________________________________________ICONS____________________________________*/
 .team-contacts{
   display: flex;
-  margin: 16px 32px 30px 32px;
-}
-.team-contacts-item,
-.join-item{  
-  cursor: pointer; 
-  display: flex;  
-}
+  margin-top: 16px;
+  justify-content: center;
+}  
 .team-link,
 .join-link
 {
@@ -381,18 +389,25 @@ cursor: pointer;
   justify-content: center;  
 }
 
-.team-link:hover, .join-link:hover {
+.team-link:hover,
+.team-link:focus,
+ .join-link:hover,
+ .join-link:focus
+  {
   background-color: #2196F3;  
 }
 .team-link:hover .team-contacts-icon {
   fill:var(--white-color);  
 }
+.team-link:focus .team-contacts-icon {
+  fill:var(--white-color);  
+}
+
 .team-contacts-item:nth-child(n+2),
 .join-item:nth-child(n+2)
 {
   margin-left: 10px;
 }
-
 .team-contacts-icon{  
   fill:#AFB1B8;   
 }
@@ -400,25 +415,23 @@ cursor: pointer;
 .client-list{
   display: flex;
 }
-.client-item{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: 1px solid #AFB1B8;
-  border-radius: 4%;
+.client-item{  
   width: 170px;
   height: 92px;    
 }
-.client-link{  
+.client-link{ 
+  border: 1px solid #AFB1B8;
+  border-radius: 4%; 
   display: flex;
   justify-content: center;
   align-items: center;
-  width: inherit; 
-  height: inherit; 
+  width: 100%; 
+  height: 100%; 
   color: #AFB1B8;
 }
-.client-item:hover{
-  border: 1px solid #2196F3;
+.client-link:hover, .client-link:focus{
+  color: #2196F3;
+  border-color: #2196F3;
 }
 .client-icon{  
   fill: currentColor;
@@ -475,7 +488,7 @@ cursor: pointer;
 .logo-foot-element {
   color: var(--white-color);
 }
-.join-list{   
+.join-list, .footer-conteiner{   
   display: flex;
 }
 .join-title{  
@@ -486,9 +499,8 @@ cursor: pointer;
 .join-icon{
   fill:var(--white-color);
 }
-.join-box{  
-  margin-right: 878px;    
-  width: 206px;   
+.join-box{ 
+  margin-left: 70px;   
 }
 .visually-hidden {
   position: absolute;
